@@ -3,19 +3,15 @@
     <div class="wrapper row">
       <div class="row">
         <img class="logo" alt="Daily logo" src="../assets/logo.png" />
-        <h1>Daily Prebuilt demo</h1>
+        <h1>Welcome to Dayla</h1>
       </div>
       <div class="row">
         <a
           class="buttonish"
           target="_blank"
-          href="https://docs.daily.co/reference"
-          >API docs</a
+          href="https://dayla.io"
+          >Home</a
         >
-        <span class="divider"></span>
-        <a target="_blank" href="https://github.com/daily-demos/prebuilt-ui"
-          ><img class="icon" alt="Vue logo" src="../assets/github_logo.png"
-        /></a>
       </div>
     </div>
   </header>
@@ -28,13 +24,18 @@ export default {
 </script>
 
 <style scoped>
+body{
+  color: #fdfdfd;
+  background-color: #0f172a;
+}
 .header-container {
-  background-color: var(--white);
-  border-bottom: 1px solid var(--grey);
+  background-color: #0f172a;
+  border-bottom: 1px solid #64748b;
   padding: 0 24px;
 }
 h1 {
   font-size: 16px;
+  color: #fff;
 }
 .wrapper {
   max-width: 1200px;
@@ -43,8 +44,8 @@ h1 {
   padding: 4px 0 4px 24px;
 }
 .logo {
-  width: 60px;
-  height: 24px;
+  width: 111px;
+  height: 32.5px;
   margin-right: 24px;
 }
 .divider {
@@ -58,18 +59,18 @@ h1 {
   width: 24px;
 }
 a.buttonish {
-  color: var(--dark-blue);
-  background: var(--white);
-  border: 1px solid var(--grey);
+  color: #fff;
+  background:#8b5cf6 ;
+  border: none;
   padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: bold;
+  border-radius: .5rem;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: regular;
   cursor: pointer;
   text-decoration: none;
 }
 a.buttonish:active {
-  background: var(--grey-lightest);
+  background: #121212;
 }
 </style>

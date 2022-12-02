@@ -1,23 +1,20 @@
 <template>
   <main class="wrapper">
     <div class="home" v-if="status === 'home'">
-      <h2>Daily Prebuilt demo</h2>
-      <p>Start demo with a new unique room or paste in your own room URL</p>
+      <h2>Welcome to Dayla Video Chat</h2>
+      <p>Get started with HIPAA Compliant Video Conferencing</p>
       <div class="start-call-container">
-        <button @click="createAndJoinRoom" :disabled="runningLocally">
-          Create room and start
-        </button>
         <p v-if="roomError" class="error">Room could not be created</p>
-        <p class="subtext">or</p>
         <form @submit="submitJoinRoom">
           <label for="room">Daily Room URL</label>
           <input
             id="room"
+            placeholder="Enter your Room ID"
             type="text"
-            placeholder="Enter room URL..."
             v-model="roomUrl"
             pattern="^(https:\/\/)?[\w.-]+(\.(daily\.(co)))+[\/\/]+[\w.-]+$"
             @input="validateInput"
+
           />
           <input type="submit" value="Join room" :disabled="!validRoomURL" />
         </form>
@@ -132,11 +129,15 @@ export default {
 </script>
 
 <style scoped>
+.body {
+  overflow: hidden;
+}
 .wrapper {
-  background-color: var(--grey-lightest);
+  background-color: #0f172a;
   height: 100%;
   display: flex;
   align-items: center;
+  color: #fff
 }
 .home {
   flex: 1;
